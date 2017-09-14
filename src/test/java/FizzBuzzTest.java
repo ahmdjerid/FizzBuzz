@@ -1,5 +1,6 @@
 import FizzBuzz.FizzBuzz;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 /**
@@ -8,10 +9,17 @@ import org.junit.Test;
  */
 public class FizzBuzzTest {
 
+
+    private FizzBuzz fizzBuzz;
+
+    @Before
+    public void init() {
+        fizzBuzz = new FizzBuzz();
+    }
+
+
     @Test
     public void should_return_input_number() {
-        //given
-        FizzBuzz fizzBuzz = new FizzBuzz();
         //when
         String result = fizzBuzz.run(2);
         //then
@@ -21,13 +29,22 @@ public class FizzBuzzTest {
 
     @Test
     public void should_return_fizz_when_input_number_is_divisible_by_three() {
-        //given
-        FizzBuzz fizzBuzz = new FizzBuzz();
         //when
         String result = fizzBuzz.run(3);
         //then
         Assert.assertEquals(result, "Fizz");
 
     }
+
+    @Test
+    public void should_return_buzz_when_input_number_is_divisible_by_five() {
+        //when
+        String result = fizzBuzz.run(5);
+        //then
+        Assert.assertEquals(result, "Buzz");
+
+    }
+
+
 
 }
