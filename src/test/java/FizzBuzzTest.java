@@ -41,10 +41,17 @@ public class FizzBuzzTest {
         //when
         String result = fizzBuzz.run(5);
         //then
-        Assert.assertEquals(result, "Buzz");
+        Assert.assertEquals("Buzz", result);
 
     }
 
+    @Test
+    public void should_return_fizzbuzz_when_input_number_is_divisible_by_five_and_three() {
+        //when
+        String result = fizzBuzz.run(15);
+        //then
+        Assert.assertEquals("FizzBuzz", result);
 
+    }
 
 }

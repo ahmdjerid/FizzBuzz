@@ -5,13 +5,16 @@ package FizzBuzz;
  *         Date: 14/09/2017
  */
 public class FizzBuzz {
+
     public String run(int number) {
+        StringBuilder result = new StringBuilder();
 
         if (number % 3 == 0) {
-            return "Fizz";
-        } else if (number % 5 == 0) {
-            return "Buzz";
+            result.append("Fizz");
         }
-        return String.valueOf(number);
+        if (number % 5 == 0) {
+            result.append("Buzz");
+        } else result = new StringBuilder(String.valueOf(number));
+        return result.toString();
     }
 }
