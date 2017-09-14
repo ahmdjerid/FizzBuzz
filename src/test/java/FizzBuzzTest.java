@@ -19,4 +19,15 @@ public class FizzBuzzTest {
 
     }
 
+    @Test
+    public void should_return_fizz_when_input_number_is_divisible_by_three() {
+        //given
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        //when
+        String result = fizzBuzz.run(3);
+        //then
+        Assert.assertEquals(result, "Fizz");
+
+    }
+
 }
